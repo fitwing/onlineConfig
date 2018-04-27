@@ -1,0 +1,56 @@
+{
+	"target"	: "BotController/new",
+	"contract"	: {
+		"timezone"	: 8,
+		"symbol"	: "5",
+		"secType"	: {
+			"enum"	: "com.ib.controller.Types$SecType",
+			"value"	: "STK"
+		},
+		"exchange"	: "SEHK",
+		"currency"	: "HKD"
+	},
+	"bots"	: [
+	{
+		"start_now"	: false,
+		"class"	: "com.avalok.trade.bot.IBPairTrader",
+		"args"	: [
+			"test_order_ref5",
+			{
+				"comment"	:"init_price",
+				"class"	: "java.math.BigDecimal",
+				"args"	: ["58.3"]
+			},
+			{
+				"comment"	:"size",
+				"class"	: "java.math.BigDecimal",
+				"args"	: ["400"]
+			},
+			{
+				"comment"	:"profit_taken",
+				"class"	: "java.math.BigDecimal",
+				"args"	: ["1.4"]
+			}
+		]
+	},
+	{
+		"start_now"	: true,
+		"class"	: "com.avalok.trade.bot.IBPairTrader",
+		"args"	: [
+			"test_order_ref6",
+			{
+				"class"	: "java.math.BigDecimal",
+				"args"	: ["58.4"]
+			},
+			{
+				"class"	: "java.math.BigDecimal",
+				"args"	: ["800"]
+			},
+			{
+				"class"	: "java.math.BigDecimal",
+				"args"	: ["1.4"]
+			}
+		]
+	}
+	]
+}
